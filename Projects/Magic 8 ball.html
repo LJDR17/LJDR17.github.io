@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<script>
+var answers = ["It is certain", 
+            "It is decidedly so", 
+            "Without a doubt", 
+            "Yes - definitely", 
+            "You may rely on it", 
+            "As I see it, yes", 
+            "Most Likely", 
+            "Outlook good", 
+            "Yes", 
+            "Signs point to yes",
+            "Reply hazy, try again",
+            "Ask again later", 
+            "Better not tell you now", 
+            "Cannot predict now", 
+            "Concentrate and ask again", 
+            "Don’t count on it", 
+            "My reply is no", 
+            "My sources say no", 
+            "Outlook not so good", 
+            "Very doubtful"];
+function shake8ball() 
+{
+    var x = document.getElementById("input-box").value;
+    var random = Math.floor(Math.random()*answers.length);
+    var answer = answers[random];
+    document.getElementById("text").innerHTML = answer;
+}
+</script>
+
+
+
+<head>
+<style>
+div.eightball 
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+div 
+{
+    width: 400px;
+    border: 10px solid black;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    margin: 20px;
+    background-color:darkblue;
+    animation-name: info_animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+#info 
+{
+    font-size: 24px;
+    margin: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+}
+@keyframes info_animation
+{
+    0% {background-color:darkblue;}
+    25% {background-color: blue;}
+    50% {background-color:indigo;}
+    75% {background-color:darkviolet}
+}
+#input-box
+{
+    margin-left: 75px;
+}
+#text
+{
+    font-size: 24px;
+    margin: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color:white;
+}
+body 
+{
+  background-image: url('abstract.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+</style>
+</head>
+<body>
+<div class="eightball">
+<p id="info">Ask a question and click the magic 8 ball</p>
+<input id="input-box" style="width: 250px;">
+<p id="text"></p>
+<img src="Magic_eight_ball.png" alt="Magic 8 ball" style="width:400px;height:400px;" onclick="shake8ball()">
+</div>
+</body>
+
+   
+    
