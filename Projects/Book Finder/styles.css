@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Pixel;
+    src: url(Files/ARCADECLASSIC.ttf) format("truetype");
+  }
+body {
+    background-image: url(Files/PixelArt.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1 {
+    font-size: 100px;
+    text-align: center;
+    font-family: Pixel;
+}
+
+
+#numcooks {
+    font-family: Pixel;
+    font-size: 32px;
+    margin-left: 43%;
+}
+#number {
+    font-family: Pixel;
+    font-size: 80px;
+    margin-left: 48.4%;
+}
+#Cookie {
+    position: fixed;
+    left:38%;
+    top: 25%;
+    cursor: url(Files/Cursor.cur), auto;
+    
+}
+#Cookie:hover {
+    transform: scale(1.05);
+}
+.statistics {
+    position: fixed;
+    left: 5%;
+    bottom: 50%;  
+}
+.statistic {
+    font-family: Pixel;
+    font-size: 40px;
+}
+.buttons {
+    position: fixed;
+    left: 17%;
+    top: 80%;  
+    
+}
+.prices {
+    position: fixed;
+    left: 15.5%;
+    top: 90%; 
+}
+.button {
+    font-family: Pixel;
+    font-size: 40px;
+    background-color: red;
+    border: 4px solid black;
+    border-radius: 50%;
+    margin: 0 20px;
+    padding: 20px;
+    display: inline-block;
+    transition: all 0.2s ease;
+     
+}
+.price {
+    font-family: Pixel;
+    font-size: 40px; 
+    margin: 0 120px;
+    padding: 20px;
+    display: inline-block;
+}
+.button:hover {
+    cursor: url(Files/Cursor.cur), auto;
+    background: burlywood!important;
+}
+
+#reset {
+    position:fixed;
+    left: 5%;
+    font-family: Pixel;
+    font-size: 40px;
+    background-color: chocolate;
+    border: 4px solid black;
+    border-radius: 50%;
+    margin: 0 20px;
+    padding: 20px;
+    display: inline-block;
+    transition: all 0.2s ease;
+    
+}
+
+#reset:hover {
+    background: burlywood;
+    cursor: url(Files/Cursor.cur), auto;
+}
