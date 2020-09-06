@@ -3,103 +3,128 @@
     padding: 0;
     box-sizing: border-box;
 }
-@font-face {
-    font-family: Pixel;
-    src: url(Files/ARCADECLASSIC.ttf) format("truetype");
-  }
-body {
-    background-image: url(Files/PixelArt.png);
+
+body{
+    background-color: #292C34;
+    background-image: url('Images/books4.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
-h1 {
-    font-size: 100px;
+
+header {
+    background: lightyellow;
+    padding: 20px;
+    position: fixed;
+    width: 2000px;
+}
+
+header > h1 {
+    color: #292C34;
     text-align: center;
-    font-family: Pixel;
-}
-
-
-#numcooks {
-    font-family: Pixel;
-    font-size: 32px;
-    margin-left: 43%;
-}
-#number {
-    font-family: Pixel;
-    font-size: 80px;
-    margin-left: 48.4%;
-}
-#Cookie {
-    position: fixed;
-    left:38%;
-    top: 25%;
-    cursor: url(Files/Cursor.cur), auto;
+    font-family: 'Lobster Two';
     
 }
-#Cookie:hover {
-    transform: scale(1.05);
-}
-.statistics {
-    position: fixed;
-    left: 5%;
-    bottom: 50%;  
-}
-.statistic {
-    font-family: Pixel;
-    font-size: 40px;
-}
-.buttons {
-    position: fixed;
-    left: 17%;
-    top: 80%;  
-    
-}
-.prices {
-    position: fixed;
-    left: 15.5%;
-    top: 90%; 
-}
-.button {
-    font-family: Pixel;
-    font-size: 40px;
-    background-color: red;
-    border: 4px solid black;
-    border-radius: 50%;
-    margin: 0 20px;
-    padding: 20px;
-    display: inline-block;
-    transition: all 0.2s ease;
-     
-}
-.price {
-    font-family: Pixel;
-    font-size: 40px; 
-    margin: 0 120px;
-    padding: 20px;
-    display: inline-block;
-}
-.button:hover {
-    cursor: url(Files/Cursor.cur), auto;
-    background: burlywood!important;
+
+#input {
+    font-size: 20px
 }
 
-#reset {
+h1 {
+    color: #292C34;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.module-border-wrap {
+    width: 500px;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, orange, gold);
+    padding: 3px;
+}
+
+.module {
+    background: palegoldenrod;
+    color: white;
+    padding: 2rem;
+}
+
+#box {
+    margin-left: 64%;
+    margin-top: 2%;
     position:fixed;
-    left: 5%;
-    font-family: Pixel;
-    font-size: 40px;
-    background-color: chocolate;
-    border: 4px solid black;
-    border-radius: 50%;
-    margin: 0 20px;
-    padding: 20px;
-    display: inline-block;
-    transition: all 0.2s ease;
-    
 }
 
-#reset:hover {
-    background: burlywood;
-    cursor: url(Files/Cursor.cur), auto;
+#title {
+  font: 50px 'Lobster Two', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+}
+
+#button.btn {
+    display: inline-block;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+    padding: 10px 30px;
+    margin-left:10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+    border-bottom-width: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:10px;
+}
+
+#button.btn:hover {
+	background-color: #e3e3e3;
+	border-color: rgba(0,0,0,0.5);
+}
+	
+#button.btn:active {
+	background-color: #CCC;
+	border-color: rgba(0,0,0,0.9);
+}
+/* blue button */
+
+#button.btn.btn-blue {
+	background-color: #699DB6;
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+}
+
+#button.btn.btn-blue:hover {
+	background-color: #4F87A2;
+	border-color: rgba(0,0,0,0.5);
+}
+
+#button.btn.btn-blue:active {
+	background-color: #3C677B;
+	border-color: rgba(0,0,0,0.9);
+}
+
+#books {
+    width:500px;
+    margin-top: 15%;
+    margin-left:64%;
+    font-size: 30px;
+    font-family: 'Roboto';
+    color: black;
+    text-align: center;
+}
+
+#message {
+    position: fixed;
+    font: 50px 'Oleo Script', Helvetica, sans-serif;
+    color: #2b2b2b;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    width: 400px;
+    margin-top:9%;
+    margin-left: 37%;
 }
