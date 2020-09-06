@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Cookie Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+<header>
+    <h1>Cookie Clicker</h1>
+</header>
+
+
+<p id="numcooks">Number of cookies: </p>
+<p id="number">0</p>
+<img id="Cookie" src= Files/Cookie.png alt="Cookie" style="width:450px;height:450px;" onclick="clickme()">
+
+<div id="reset" onclick="reset()">reset</div>
+
+
+<div class="statistics">
+    <div class="statistic" id="numings">
+        <p>Ingriedients: </p>
+    </div>
+    <div class="statistic" id="numgrans">
+        <p>Grannies</p>
+    </div>
+    <div class="statistic" id="numbaks">
+        <p>Bakeries: </p>
+</div>
+
+<div class="prices">
+    <div class="price" id="priceing">
+        <p>cost: 30</p>
+    </div>
+    <div class="price" id="pricegran">
+        <p>cost: 100</p>
+    </div>
+    <div class="price" id="pricebak">
+        <p>cost: 500</p>
+</div>
+
+
+<div class="buttons">
+    <div class="button" id="ingriedient" onclick="ingriedient()">
+        <p>Not enough money</p>
+    </div>
+    <div class="button" id="granny" onclick="granny()">
+        <p>Not enough money</p>
+    </div>
+    <div class="button" id="bakery" onclick="bakery()">
+        <p>Not enough money</p>
+    </div>
+</div>
+</body>
+</html>
