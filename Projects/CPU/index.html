@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Structure of the CPU</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div class="parallax"></div>
+
+<h2>What is a CPU?</h2>
+<p>A central processing unit is the electronic circuitry within a computer that executes instructions that make up a computer program. The CPU performs basic arithmetic, logic, controlling, and input/output operations specified by the instructions in the program.</p>
+<hr id="break">
+
+<h3>So how does it work?</h3>
+
+<div style="display:inline-flex;">
+  <div style="width: 50%;">
+    <p>The working of the CPU is a 3 step process. First, an instruction is fetched from memory. 
+    Second, the instruction is decoded. Third, the instruction is executed and an operation is performed. 
+    These three steps repeat in a cycle that begins again with the CPU fetching the next instruction. 
+    The steps are referred to as the fetch-decode-execute cycle.</p>
+  </div>
+  <div style="width: 50%">
+    <img src="Images/fdr.jpg" id="cycle" style="width:350px; height:170px;">
+  </div>
+</div>
+<p> The speed of a CPU is measured by how many cycles it executes per second, measured in GHz (gigahertz) - this is known as the clock speed. A CPU with a clock speed of 3.2 GHz executes 3.2 billion cycles per second. </p>
+<hr>
+
+<h3>Now that we know how it works, what's inside of it?</h3>
+<p>Well, there are many components that each have different functions, hover over each point to see its function:</p>
+
+
+<ul>
+  <li><h4 id="hover1">Control unit</h4>
+  <div id="hover">The Control Unit is the component of the processor which directs the operations of the CPU. 
+  It controls and coordinates the activities of the CPU and manages the flow of data between the CPU and other devices. It also decodes instructions.</div></li>
+  
+  <li><h4 id="hover1">ALU</h4>
+  <div id="hover">The ALU is the Arithmetic Logic Unit which is where calculations are carried out such as mathematical tasks, logic tests and data comparisons.</div></li>
+  
+  <li><h4 id="hover1">Cache</h4>
+  <div id="hover">Cache is a small area of very fast memory within the CPU which is used to store data when carrying out instructions.</div></li>
+  
+  <li><h4 id="hover1">MAR</h4>
+  <div id="hover">The MAR is the Memory Address Register which holds the memory address of data or instructions that is to be read from or written to memory (RAM).</div></li>
+  
+  <li><a id="hover1"><h4>MDR</h4></a>
+  <div id="hover">The MDR is the Memory Data Register which temporarily stores data that has been read or data that needs to be written to memory.</div></li>
+  
+  <li><h4 id="hover1">Accumulator</h4>
+  <div id="hover">This is where results of calculations carried out by the ALU are temporarily stored until they are needed.</div></li>
+  
+  <li><h4 id="hover1">CIR</h4>
+  <div id="hover">The CIR is the Current Instruction Register and holds the instruction currently being executed.</div></li>
+</ul>
+
+
+<div style="display:inline-flex;">
+  <div style="width: 50%;">
+    <p>This diagram shows the flow of data around the CPU, you can see the main memory, which holds programs currently running. This is also known as RAM (however this is not located in the CPU, it is connected to it by circuits called buses).</p>
+    <a id="link" href="https://milapneupane.com.np/2019/07/06/how-does-a-cpu-work/" target="_blank">Click here for more details about how the CPU works</a><br><br>
+    <a id="link" href="quiz.html">Take a quick quiz to test your knowledge</a>
+  </div>
+  <div style="width: 50%">
+    <img src="Images/cycle.jpg" id="cycle" style="width:350px; height:240px;">
+  </div>
+</div>
+
+
+<hr>
+
+</body>
+</html>

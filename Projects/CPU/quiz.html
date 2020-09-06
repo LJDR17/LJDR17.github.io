@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    
+<body>
+<script src="script.js"></script>
+<form name="Quiz"> 
+    
+    <label id="label">Name:</label><input type="text" name="name"><br><br>
+    
+    <div class="box">
+    <p class="question">1. What would be the speed of the CPU in GHz if it executed 3,200,000,000 cycles a second?</p><input id="numb" type="number" name="quantity" min="0" max="100" step="1">
+    </div>
+    
+    <div class="box">
+    <p class="question">2. Which of the following is a part of the CPU?</p>
+    <input type="radio" name="radio1" value="Answer1"><label id="label">Accumulator</label><br>
+    <input type="radio" name="radio1" value="Answer2"><label id="label">RAM</label><br>
+    <input type="radio" name="radio1" value="Answer3"><label id="label">SSD</label><br><br>
+    </div>
+    
+    <div class="box">
+    <p class="question">3. What is the name of the part of the CPU that does calculations?</p><input type="text" name="ans" size="15">
+    </div>
+    
+    <div class="box">
+    <p class="question">4. What does a CPU do?</p>
+    <input type="radio" name="radio2" value="Answer1"><label id="label">Executes instructions</label><br>
+    <input type="radio" name="radio2" value="Answer2"><label id="label">Permanently holds data</label><br>
+    <input type="radio" name="radio2" value="Answer3"><label id="label">Provides power for the computer</label><br><br>
+    </div>
+    
+    
+    <button type="button" onclick="checkAnswers()">Submit</button><br>
+    
+    <br><a id="link" href="index.html">Back to webpage</a>
+</form>
+</body>
