@@ -1,0 +1,96 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+  <script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.js"></script>
+  <script src="https://cdn.rawgit.com/wagenaartje/neataptic/a7610e38/dist/neataptic.js"></script>
+  <!--<script src="https://liquidcarrot.io/carrot/cdn/0.2.20/carrot.js"></script>should migrate to liquid carrot -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.js"></script>
+  <!may need jquery>
+  
+</head>
+
+<body>
+  <header>
+    <h1>Evolution simulator</h1>
+  </header>
+  
+  <div id="canvas-wrapper"></div>
+  
+
+  <div class="flex-container">
+
+      <div id="graphs">
+        <div style="width: 50%;">
+          <canvas id="line-chart" width="500" height="500"></canvas>
+        </div>
+        <div style="width: 50%;">
+          <canvas id="line-chart2" width="500" height="500"></canvas>
+        </div>
+      </div>
+
+      <div id="paragraph" >
+
+        <div class="buttons">
+          <button id="button" type="button" onclick="enableSpeed()">Increase Speed</button>
+          <button id="button" type="button" onclick="disableSpeed()">Decrease Speed</button>
+          <button id="button" type="button" onclick="changeSettings()">Submit</button>
+          <button id="button" type="button" onclick="defaultSettings()">Default settings</button>
+        </div>
+
+        <form id="input">
+        <div id="boxGroup">
+          <div class="box">
+            <p>Number of creatures</p><input id="num1" type="number" name="quantity1" min="0" max="1000" step="1">
+          </div>
+          <div class="box">
+            <p>Number of food</p><input id="num2" type="number" name="quantity2" min="0" max="1000" step="1">
+          </div>
+          <div class="box">
+            <p>Detection radius</p><input id="num3" type="number" name="quantity3" min="0" max="1000" step="1">
+          </div>
+          <div class="box">
+            <p>Iterations</p><input id="num4" type="number" name="quantity4" min="0" max="1000" step="1">
+          </div>
+          <div class="box">
+            <p>Mutation rate</p><input id="num5" type="number" name="quantity5" min="0" max="1000" step="1">
+          </div>
+          <div class="box">
+            <p>Number of hidden nodes at start</p><input id="num6" type="number" name="quantity6" min="0" max="1000" step="1">
+          </div>
+          <div class="box">
+            <p>Elitism percentage</p><input id="num7" type="number" name="quantity7" min="0" max="1000" step="1">
+          </div>
+          <div class="box">
+            <p>Mutation Amount</p><input id="num8" type="number" name="quantity8" min="0" max="1000" step="1">
+          </div>
+        </div>
+        </form>
+        
+        <p>This is an evolution simulator that uses neural networks controlled by a 
+          genetic algorithm to evolve blue creatures whose goal it is to learn how to eat the green food.
+          <br><br>
+          There are a variety of simulation parameters that you can change: <br><br>
+          <ol id="list">
+            <li>Number of creatures: this is the total numbers of creatures in the simulation.</li>
+            <li>Number of food: this is the total number of food in the simulation.</li>
+            <li>Detection radius: this is the radius in which the creatures can see food.</li>
+            <li>Iterations: this is how long each evaluation/generation will last for.</li>
+            <li>Mutation rate: the percentage of creatures that will be mutated every generation. Note, This is a value between 0 and 1 e.g. 0.5 = 50%.</li>
+            <li>Number of hidden nodes at start: how many hidden nodes the neural networks will have when initialised.</li>
+            <li>Elitism percentage: the percentage of the top performing creatures that get copied into the next generation. This is also a decimal from 0 to 1.</li>
+            <li>Mutation amount: the amount of times a mutation method will get applied to each neural network.</li>
+          </ol>
+        </p>
+      </div>
+    </div>
+<link rel="stylesheet" href="CSS project.css">
+<script language="javascript" type="text/javascript" src="JS charts.js"></script>
+<script language="javascript" type="text/javascript" src="JS project.js"></script>
+<script language="javascript" type="text/javascript" src="NEAT.js"></script>
+<script language="javascript" type="text/javascript" src="Food.js"></script>
+<script language="javascript" type="text/javascript" src="Creature.js"></script>
+<script language="javascript" type="text/javascript" src="Buttons.js"></script>
+
+</body>
+</html>
