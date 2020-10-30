@@ -46,13 +46,13 @@ function displayResults (weather) {
     document.getElementById("button").style.background = "#BCC6CC";
   }
   else if ((weather.weather[0].main) == "Snow") {
-    document.body.style.backgroundColor = "#E5E4E2";
-    document.getElementById("result").style.background = "#E3E4FA";
+    document.body.style.backgroundColor = "#A6CBE7";
+    document.getElementById("result").style.background = "#C3D2E2";
     document.getElementById("button").style.background = "#D1D0CE";
   }
   else if ((weather.weather[0].main) == "Atmosphere") {
     document.body.style.backgroundColor = "#C2B280";
-    document.getElementById("result").style.background = "#DEB887";
+    document.getElementById("result").style.background = "#B7D0E3";
     document.getElementById("button").style.background = "#FFEBCD";
   }
   else if ((weather.weather[0].main) == "Thunderstorm") {
