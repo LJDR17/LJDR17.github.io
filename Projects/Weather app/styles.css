@@ -1,14 +1,10 @@
-
-
-
-  button, input {
+button, input {
     border: none;
     background: none;
     outline: none;
     color: white;
   }
-   
-  
+
   body {
     font: 1rem/1.3 "Roboto", sans-serif;
     background:  #0a1f44;
@@ -54,14 +50,14 @@
     background: rgb(40, 40, 168);
   }
 
-  #current {
+  #result {
     background: rgb(66, 153, 187);
     border-radius: 20px;
     width:290px;
     transition: background-color 1000ms linear; 
   }
    
-  #current #temp {
+  #result #temp {
     color: #FFF;
     font-size: 102px;
     font-weight: 900;
@@ -70,7 +66,7 @@
   }
   
   
-  #current #weather {
+  #result #weather {
     color: #FFF;
     font-size: 32px;
     font-weight: 700;
@@ -79,7 +75,7 @@
     text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
   }
   
-  #current #country {
+  #result #country {
     color: #FFF;
     font-size: 24px;
     font-weight: 700;
@@ -88,7 +84,7 @@
     text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
   }
 
-  #current #feel {
+  #result #feel {
     color: #FFF;
     font-size: 24px;
     font-weight: 700;
