@@ -1,6 +1,6 @@
 var creatures = [];
 var food = [];
-var poison = [];
+//var poison = [];
 var iteration = 0;
 var highestScore = 0;
 
@@ -12,11 +12,12 @@ function setup() {
   noLoop();
   canvas.id('canvas');
   canvas.parent('canvas-wrapper');
-  textSize(38);
+  textSize(40);
   fill(50);
-  text('Scroll down to change simulation parameters', windowWidth/3.2, windowHeight/2);
+  text('Scroll down to change simulation parameters', windowWidth/3.2, windowHeight/2); // Text wraps within text box
 }
 
+//so canvas scales to screen size
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
@@ -64,6 +65,9 @@ if (started) {
   for(var i = food.length - 1; i >= 0; i--){
     food[i].show();
   }
+  /*for(var i = poison.length - 1; i >= 0; i--){
+    poison[i].show();
+  }*/
   for(var i = creatures.length - 1; i >= 0; i--){
     //refresh updates statistics
     creatures[i].move();
@@ -75,14 +79,18 @@ if (started) {
   the code here is continually looped. This means I don't have to try
   and implement timer functions which are designed to execute code after a delay*/
 }
-}
 
-//took out of setup so I can choose when it starts
+}
 function start(){
+  
+  removeData(chart);
+  removeData(chart2);
+
   started = true;
-  //document bug, theory is that iteration was higher than iterations when it restarted so the generation never ended as iteration never = iterations
+  //document bug
   iteration = 0;
   food = [];
+  //poison = [];
   initNeat();
   // Triggers food spawning and limits amount of food
   for(var i = 0; i < foodAmount; i++){
@@ -90,10 +98,14 @@ function start(){
   new Food();
   }
 
+  /*for(var i = 0; i < poisonAmount; i++){
+    
+  new Poison();
+  }*/
+
   for(var i = 0; i < 100; i++) neat.mutate();
 
   startEvaluation();
-  
   loop();
 }
 
@@ -116,4 +128,4 @@ function angle(x1, y1, x2, y2){
   a = Math.acos(dx);
   a = dy < 0 ? 2 * Math.PI - a : a;
   return a;
-}
+}  
