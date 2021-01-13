@@ -124,7 +124,6 @@ function angle(x1, y1, x2, y2){
   d = distance(x1, y1, x2, y2);
   dx = (x2-x1) / d;
   dy = (y2-y1) / d;
-
   a = Math.acos(dx);
   a = dy < 0 ? 2 * Math.PI - a : a;
   return a;
