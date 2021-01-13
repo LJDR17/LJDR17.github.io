@@ -4,6 +4,7 @@ var foodDetection  = 4;
 /*optimisation - adding less food means creatures actually have to learn
 instead of going really fast in a straight line where there is a likely chance they will run into food*/
 var foodAmount;
+//var poisonAmount = 30;
 
 var SPEED = 3;
 
