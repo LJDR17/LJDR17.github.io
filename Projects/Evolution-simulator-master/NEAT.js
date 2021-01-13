@@ -23,7 +23,7 @@ var score;
 //so I don't get annoying messages
 neataptic.Config.warnings = false;
 
-// Construct the genetic algorithm
+// construct the genetic algorithm
 function initNeat(){
   //foodDetection is *2 because the angle and distance of food needs to be inputted
   neat = new neataptic.Neat(foodDetection * 2, 2, null,
