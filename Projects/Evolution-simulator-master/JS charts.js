@@ -41,6 +41,7 @@ chart.data.datasets.forEach((dataset) => {
 chart.update();
 }
 
+
 function removeData(chart) {
   chart.data.datasets.forEach((dataset) => {
       var length = chart.data.labels.length;
