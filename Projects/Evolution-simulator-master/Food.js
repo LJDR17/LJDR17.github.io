@@ -1,7 +1,6 @@
 //feature = add option to choose where food goes - influences evolution.
 //feature = add poison = influences evolution
 function Food() {
-
   this.x = Math.floor(Math.random() * windowWidth);
   this.y = Math.floor(Math.random() * windowHeight);
   food.push(this);
