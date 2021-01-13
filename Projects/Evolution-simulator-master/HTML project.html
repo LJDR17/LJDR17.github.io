@@ -1,4 +1,4 @@
-<html>
+html>
 <head>
   <meta charset="UTF-8">
   <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
@@ -6,7 +6,7 @@
   <script src="https://cdn.rawgit.com/wagenaartje/neataptic/a7610e38/dist/neataptic.js"></script>
   <!--<script src="https://liquidcarrot.io/carrot/cdn/0.2.20/carrot.js"></script>should migrate to liquid carrot -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.js"></script>
-  <!may need jquery>
+ 
   
 </head>
 
@@ -20,7 +20,7 @@
 
   <div class="flex-container">
 
-      <div id="graphs">
+      <div id="graphs" style="display:inline-flex;">
         <div style="width: 50%;">
           <canvas id="line-chart" width="500" height="500"></canvas>
         </div>
@@ -34,7 +34,7 @@
         <div class="buttons">
           <button id="button" type="button" onclick="enableSpeed()">Increase Speed</button>
           <button id="button" type="button" onclick="disableSpeed()">Decrease Speed</button>
-          <button id="button" type="button" onclick="changeSettings()">Submit</button>
+          <button id="button" type="button" onclick="checkAnswers()">Submit</button>
           <button id="button" type="button" onclick="defaultSettings()">Default settings</button>
         </div>
 
@@ -77,6 +77,7 @@
             <li>Detection radius: this is the radius in which the creatures can see food.</li>
             <li>Iterations: this is how long each evaluation/generation will last for.</li>
             <li>Mutation rate: the percentage of creatures that will be mutated every generation. Note, This is a value between 0 and 1 e.g. 0.5 = 50%.</li>
+            <li>Iterations: this is how long eat evaluation/generation will last for.</li>
             <li>Number of hidden nodes at start: how many hidden nodes the neural networks will have when initialised.</li>
             <li>Elitism percentage: the percentage of the top performing creatures that get copied into the next generation. This is also a decimal from 0 to 1.</li>
             <li>Mutation amount: the amount of times a mutation method will get applied to each neural network.</li>
