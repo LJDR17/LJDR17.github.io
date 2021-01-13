@@ -19,7 +19,7 @@ function Creature(genome) {
     
     creatures.push(this);
 }
-  
+
 Creature.prototype.move = function() {
     
     var input = this.detect();
@@ -139,12 +139,20 @@ Creature.prototype.show = function() {
     ellipse(this.x, this.y, 15); 
 }
   
-Creature.prototype.eat = function(food) {
-    var distance1 = distance(this.x, this.y, food.x, food.y);
+Creature.prototype.eat = function(object) {
+    var distance1 = distance(this.x, this.y, object.x, object.y);
     //distance so small they're pretty much overlapping - collision detection
     if (distance1 < 10) {
-      this.points += 20;
-      food.restart();
+      //if the object that is being eaten is in the poison array, minus points, otherwise add points
+     /* var includes = poison.includes(object);
+      if (includes == true ) { 
+        this.points -= 20;
+        object.restart();
+      }
+      else {*/
+        this.points += 20;
+        object.restart();
+      //}
       return true;
     }
     return false;
@@ -160,11 +168,14 @@ Creature.prototype.detect = function() {
     
     for(var localFood in food){
         localFood = food[localFood];
+        //if creature eats specific food in array
         if(this.eat(localFood)) continue;
-    
+        
         var distance1 = distance(this.x, this.y, localFood.x, localFood.y);
+        
+        // largest distance within radius
         if(distance1 < detectionRadius){
-            // largest distance withing radius
+            //largest distance in foodDistances array
             var largestClosestDistance = Math.max.apply(null, foodDistances);
             
             //index in foodDistances where largestClosestDistance is
@@ -172,12 +183,38 @@ Creature.prototype.detect = function() {
             
             if(distance1 < largestClosestDistance){
                 //separate arrays for the physical food and their distances
+                //populates array with relevant data
                 foodDistances[whereLargest] = distance1;
                 nearestFoods[whereLargest] = localFood;
             }
         }
     }
     
+    /* Detect nearest foods
+    var nearestPoison= [];
+    //makes an array the size of foodDetection
+    //https://stackoverflow.com/questions/4852017/how-to-initialize-an-arrays-length-in-javascript
+    var poisonDistances = Array.apply(null, Array(foodDetection)).map(Number.prototype.valueOf, Infinity);
+    
+    for(var localPoison in poison){
+        localPoison = poison[localPoison];
+        if(this.eat(localPoison)) continue;
+    
+        var distance1 = distance(this.x, this.y, localPoison.x, localPoison.y);
+        if(distance1 < detectionRadius){
+            // largest distance within radius
+            var largestClosestDistance = Math.max.apply(null, poisonDistances);
+            
+            //index in foodDistances where largestClosestDistance is
+            var whereLargest = poisonDistances.indexOf(largestClosestDistance);
+            
+            if(distance1 < largestClosestDistance){
+                //separate arrays for the physical food and their distances
+                poisonDistances[whereLargest] = distance1;
+                nearestPoison[whereLargest] = localPoison;
+            }
+        }
+    }*/
     
     // Create and normalize input
     var input = [];
@@ -200,12 +237,28 @@ Creature.prototype.detect = function() {
             input.push(distance1 / detectionRadius);
         }
     }
+
+    /*for(var i = 0; i < foodDetection; i++){
+        var poison1 = nearestPoison[i];
+        var distance1 = poisonDistances[i];
+        
+        if(poison1 == undefined){
+            //if there is no food in distance, inputs are 0
+            input = input.concat([0, 0]);
+        } 
+        else {
+            //output is an array, each of the following inputs the angle and distance to the network
+            input.push(angle(this.x, this.y, poison1.x, poison1.y) / (2 * PI));
+            input.push(distance1 / detectionRadius);
+        }
+    }*/
+
     //shows detection radius when you hover over creatures
     if(distance(mouseX, mouseY, this.x, this.y) < 15){
         noFill();
         stroke(0);
         ellipse(this.x, this.y, detectionRadius*2);
     }
-    console.log(input);
+    
     return input;
 }
