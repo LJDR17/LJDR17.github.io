@@ -102,6 +102,7 @@
    width: 50%;
    display: flex;
    justify-content: center;
+   align-self: center;
 }
 
 .grid-item-image {
@@ -120,7 +121,7 @@
 
 .grid-item-title {
     padding-bottom: 50px;
-    font-size: 50px;
+    font-size: 2.7vw;
     font-weight: 900;
     font-family: Fraunces;
     color: hsl(212, 27%, 19%);
@@ -218,8 +219,6 @@
   flex-direction: column; 
   align-items: center;
 }
-
-
 
 .client-grid {
     display: flex;
@@ -349,7 +348,7 @@
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 850px) {
     .menu-container {
         display: none;
     }
@@ -424,4 +423,88 @@
         width: 70%;
     }
 
+}
+
+@media only screen and (max-width: 950px) {
+    .last-grid-item-title {
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+    .last-grid-item-text {
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+    .image-content {
+        top: 25%;
+        width: 80%;
+    }
+    .grid-item-text {
+        font-size: 16px;
+    }
+    .grid-item-button span {
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (min-width: 2560px) {
+    .logo {
+        width: 200px;
+    }
+    .menu-list-item {
+        font-size: 30px;
+    }
+    #contact {
+        font-size: 30px;
+        width: 150px;
+    }
+    .title {
+        font-size: 100px;
+    }
+    .grid-item-title {
+        font-size: 70px;
+    }
+    .grid-item-text {
+        font-size: 30px;
+    }
+    .grid-item-button span {
+        font-size: 30px;
+    }
+    #button-1 span::after {
+        width: 225px;
+    }
+    #button-2 span::after {
+        width: 225px;
+    }
+    .last-grid-item-title {
+        font-size: 70px;
+    }
+    .last-grid-item-text {
+        font-size: 30px;
+    }
+    .client-grid-item-text {
+        font-size: 30px;
+    }
+    .client-grid-title {
+        font-size: 40px;
+    }
+    .client-grid-item-label {
+        font-size: 20px;
+    }
+    .client-grid-item-name {
+        font-size: 25px;
+    }
+    .info {
+        font-size: 25px;
+        width: 150px;
+    }
+    .social {
+        width: 35px;
+    }
+    .social-logo {
+        width: 25px;
+    }
+    .footer-title-logo {
+        height: 40px;
+    }
 }
