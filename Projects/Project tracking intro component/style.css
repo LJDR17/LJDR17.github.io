@@ -4,12 +4,11 @@ body {
 }
 
 .background {
-  position: absolute;
-  top: 0px;
-  right: -20px;
-  width: 50%;
-  height: 60%;
-  
+  position: fixed;
+  top: -12%;
+  left: 62%;
+  width: 40%;
+  height: 650px;
   margin: auto;
   background: hsl(207, 33%, 95%);
   border-radius: 0% 0% 10% 10%;
@@ -82,7 +81,8 @@ body {
 
 
 .grid-item-content-2 {
-   float: right;
+   position: absolute;
+   right: -260px;
 }
 
 .label-flex {
@@ -169,10 +169,11 @@ body {
     .grid-item {
         justify-content: center;
         width: 100%; 
+   
     }
     #first {
        order: 1;
-       padding-top: 10%; 
+       padding-top: 60vh; 
        margin-left: 20px;
        padding-bottom: 60px;
     }
@@ -182,29 +183,37 @@ body {
     }
     .grid-item-title{ 
         font-size:  50px;
-        width: 350px !important;
+        width: 300px !important;
     }
     .grid-item-button-text {
         padding-left: 10px;
         padding-top: 10px;
     }
-    
+    .grid-item-image {
+        width: 125% !important;
+    }
+    .grid-item-content-2 {
+    right: -200px !important;
+    }
     .button-flex {
         flex-direction: column; 
         align-items: flex-start;        
     }
     .grid-item-image {
-        margin-right: -150px;
+        width: 60%;
         overflow-x: hidden;
    }
    .grid-item-content-2 {
-        
+    right: -400px;
  }
+
 }
 @media only screen and (max-width: 1300px) {
     .grid-item-title{ 
         font-size:  45px;
         width: 350px;
     }
-    
+    .grid-item-image {
+        width: 80%;
+   }
 }
